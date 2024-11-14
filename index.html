@@ -1,22 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Tracker Demo</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        #data-info { margin-top: 20px; }
-        .info-section { margin-bottom: 20px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esperienza di Sorveglianza</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to the Data Tracker Demo</h1>
-    <p>This website is tracking some information about you...</p>
-    <div id="data-info">
-        <!-- Display tracked data here -->
-    </div>
-    <script src="tracker.js"></script>
+  <!-- Contenitore Video -->
+  <div id="videoContainer">
+    <video id="introVideo" controls autoplay>
+      <source src="video.mp3.mp4" type="video/mp4">
+      Il tuo browser non supporta il video HTML5.
+    </video>
+    <!-- Bottone di Consenso (inizialmente nascosto) -->
+    <button id="consentButton" style="display: none;">Dai il Consenso</button>
+  </div>
+
+  <!-- Interazioni nella Pagina del Video -->
+  <div id="interactions">
+    <button onclick="addReaction()">👍 Reagisci</button>
+    <button onclick="showSurvey()">Rispondi al Sondaggio</button>
+    <input type="text" id="commentBox" placeholder="Lascia un commento..." onblur="addComment()">
+  </div>
+
+  <!-- Pagina di Tracciamento delle Attività -->
+  <div id="trackingPage" style="display: none;">
+    <h2>Dati Rilevati</h2>
+    <ul id="trackingData"></ul>
+    <button onclick="goBackToVideo()">Torna al Video</button>
+  </div>
+
+  <!-- Importa il file JavaScript -->
+  <script src="tracker.js"></script>
 </body>
 </html>
-<button id="trackButton">Click Me</button>
