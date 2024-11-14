@@ -1,12 +1,35 @@
-#data-info {
-    background-color: #f4f4f9;
-    padding: 20px;
-    border: 1px solid #ccc;
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #videoContainer {
+    text-align: center;
     margin-top: 20px;
-}
-
-.info-section {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    color: #333;
-}
+  }
+  
+  #consentButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #trackingPage {
+    display: none;
+  }
+  
+  #interactions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  #commentBox {
+    padding: 5px;
+    width: 200px;
+  }
+  
